@@ -1,0 +1,100 @@
+@import "../variables";
+
+html, body {
+  height: 100%;
+}
+
+.login-box {
+  width: 100%;
+  height: calc(100vh - 40px);
+  display: table;
+
+  .holder {
+    display: table-cell;
+    vertical-align: middle;
+  }
+
+  .button.button--twitch {
+    background-color: $twitchPurple;
+  }
+
+  [data-whatinput="mouse"].button {
+    outline: 0;
+  }
+
+  .button {
+    padding: 0 8px;
+    font-size: 17px;
+    text-transform: capitalize;
+    background: rgb(49, 195, 162);
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+    display: inline-block;
+    height: 34px;
+    line-height: 32px;
+    transition: all 275ms;
+    font-weight: bold;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .login-button .fab, .login-button .far, .login-button .fas {
+    font-size: 20px;
+  }
+
+  .login-button .fab, .login-button .far, .login-button .fas, .login-button img {
+    margin-right: 10px;
+  }
+
+  .form-control.channel-name {
+    width: 20%;
+    margin-bottom: 10px;
+    display: table-cell;
+  }
+}
+
+.overlayloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5);
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+}
+.overlayloader .overlay-loader-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: block;
+  z-index: 99999;
+  margin-top: -40px; /* Half height of loader icon */
+  margin-left: -64px; /* Half width of loader icon */
+  color: $twitchPurple;
+}
+
+.btn-twitch {
+  background-color: $twitchPurple;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.channel-thumbnail {
+  width: 100px;
+}
+
+#twitch-embed, .recent-events {
+  height: 500px;
+}
+
+.recent-events {
+  overflow: scroll;
+}
